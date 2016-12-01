@@ -16,10 +16,10 @@ for x in pca_config:
 for x in autoencoder_config:
     autoencoder_accuracy.append(x['accuracy'])
 
-plt.plot(unit_list, pca_accuracy, label='PCA accuracy')
+plt.plot(unit_list, pca_accuracy, label='PCA CV Mean accuracy')
 for a,b in zip(unit_list, pca_accuracy):
     plt.text(a, b, str(round(b, 3)))
-plt.plot(unit_list, autoencoder_accuracy, label='AutoEncoder accuracy')
+plt.plot(unit_list, autoencoder_accuracy, label='AutoEncoder CV Mean accuracy')
 for a,b in zip(unit_list, autoencoder_accuracy):
     plt.text(a, b, str(round(b, 3)))
 plt.legend(loc='best')
